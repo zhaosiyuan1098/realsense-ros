@@ -80,6 +80,7 @@ def generate_launch_description():
 
     return LaunchDescription(declare_configurable_parameters(realsense_node_params) + 
                              declare_configurable_parameters(frame_latency_node_params) +[
+        # 一种特殊类型的节点，它可以包含一个或多个节点，形成一个更大的组合节点
         ComposableNodeContainer(
             name='my_container',
             namespace='',

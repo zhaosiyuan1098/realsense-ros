@@ -54,7 +54,8 @@ configurable_parameters = [{'name': 'camera_name',                  'default': '
                            {'name': 'depth_module.exposure.2',      'default': '1', 'description': 'Depth module second exposure value. Used for hdr_merge filter'},
                            {'name': 'depth_module.gain.2',          'default': '16', 'description': 'Depth module second gain value. Used for hdr_merge filter'},
                            {'name': 'enable_sync',                  'default': 'false', 'description': "'enable sync mode'"},
-                           {'name': 'enable_rgbd',                  'default': 'false', 'description': "'enable rgbd topic'"},
+                            # modified by siyuan, default:false
+                           {'name': 'enable_rgbd',                  'default': 'true', 'description': "'enable rgbd topic'"},
                            {'name': 'enable_gyro',                  'default': 'false', 'description': "'enable gyro stream'"},
                            {'name': 'enable_accel',                 'default': 'false', 'description': "'enable accel stream'"},
                            {'name': 'gyro_fps',                     'default': '0', 'description': "''"},
@@ -64,9 +65,11 @@ configurable_parameters = [{'name': 'camera_name',                  'default': '
                            {'name': 'angular_velocity_cov',         'default': '0.01', 'description': "''"},
                            {'name': 'linear_accel_cov',             'default': '0.01', 'description': "''"},
                            {'name': 'diagnostics_period',           'default': '0.0', 'description': 'Rate of publishing diagnostics. 0=Disabled'},
+                           # modified by siyuan, default:false
                            {'name': 'publish_tf',                   'default': 'true', 'description': '[bool] enable/disable publishing static & dynamic TF'},
-                           {'name': 'tf_publish_rate',              'default': '0.0', 'description': '[double] rate in Hz for publishing dynamic TF'},
-                           {'name': 'pointcloud.enable',            'default': 'false', 'description': ''},
+                           # modified by siyuan, default:0
+                           {'name': 'tf_publish_rate',              'default': '10.0', 'description': '[double] rate in Hz for publishing dynamic TF'},
+                           {'name': 'pointcloud.enable',            'default': 'true', 'description': ''},
                            {'name': 'pointcloud.stream_filter',     'default': '2', 'description': 'texture stream for pointcloud'},
                            {'name': 'pointcloud.stream_index_filter','default': '0', 'description': 'texture stream index for pointcloud'},
                            {'name': 'pointcloud.ordered_pc',        'default': 'false', 'description': ''},
