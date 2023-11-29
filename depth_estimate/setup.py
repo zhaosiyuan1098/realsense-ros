@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'transform_matrix_calculate = depth_estimate.transform_matrix_calculate:main',
         ],
     },
 )
